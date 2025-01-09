@@ -1,26 +1,17 @@
-# Título del proyecto
+# Contact Form
 
 <p>
     <img src="https://raw.githubusercontent.com/FernandoTejedorL/react-contact-form/refs/heads/main/design/update.png" alt="Imagen del proyecto">
 </p>
 
-## Vista en vivo
 
-<ul>
-    <li>
-        <a target="_blank" href="">Vista en vivo</a>
-    </li>
-</ul>
 
-## Descripción 📑
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
+## What have I learnt? 🙇🏻
 
-## ¿Qué he aprendido en este proyecto? 🙇🏻
+The use of react hook form to easily make form validations
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
-
-## Tecnologías 🛠
+## Tecnologies 🛠
 
 <!-- Iconos sacados de: https://github.com/alexandresanlim/Badges4-README.md-Profile?tab=readme-ov-file#-languages- -->
 
@@ -32,31 +23,20 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, 
 
 ## Capturas del proyecto
 
-<p>
-   <img src="" alt="Captura del proyecto">
-   <img src="" alt="Captura del proyecto">
-   <img src="" alt="Captura del proyecto">
-</p>
 
 ## Autor ✒️
 
-**TU NOMBRE**
+FERNANDO TEJEDOR
 
 <ul>
     <li>
-        <a href="micorreo@midominio.com">micorreo@midominio.com</a>
+        <a href="fernandotejedorlopez@gmail.com">fernandotejedorlopez@gmail.com</a>
     </li>
     <li>
-        <a href="https://www.linkedin.com/in/tu-url-de-linkedin/">LinkedIn</a>
-    </li>
-    <li>
-        <a href="https://tu-dominio.com/">Porfolio web</a>
+        <a href="[https://www.linkedin.com/in/tu-url-de-linkedin/](https://www.linkedin.com/in/fernando-tejedor-65483b6b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)">LinkedIn</a>
     </li>
 </ul>
 
-## Link del reto (si es público)
-
-<a href="">Página de frontendmentor</a>
 
 ## Instalación
 
