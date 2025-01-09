@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import './normalize.css';
+import { COLORS } from './colors';
 export const GlobalStyles = createGlobalStyle`
     *,
     *::after,
@@ -25,7 +26,19 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        font-family: sans-serif;
+        font-family: "Karla", serif;
+        line-height: 150%;
+        background-color: ${COLORS.green200};
+        display: flex;
+        justify-content: center;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        margin: 0;
+    }
+
+    .selected{
+        background-color: ${COLORS.green200};
     }
 
 `;

@@ -1,94 +1,116 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import {
+	StyledConsentBox,
+	StyledEachInputContainer,
+	StyledEachQuery,
+	StyledForm,
+	StyledFormContainer,
+	StyledHeader,
+	StyledInput,
+	StyledLabel,
+	StyledNameandSurname,
+	StyledQueryContainer,
+	StyledSubmitButton,
+	StyledTextArea,
+	StyledTextcontainer
+} from './form.styles';
 
 const Form = () => {
 	const {
 		register,
 		handleSubmit,
 		watch,
+		reset,
 		formState: { errors }
 	} = useForm();
-	console.log(errors);
+	console.log(errors); // comprobar que está vacío
 	const selectedRadio = watch('query');
 	const [successForm, setSuccessForm] = useState(false);
 
 	return (
-		<div>
+		<StyledFormContainer>
 			{successForm && (
 				<div>
 					<h2>Message Sent!</h2>
 					<p>Thanks for completing the form. We’ll be in touch soon!</p>
 				</div>
 			)}
-			<h1>Contact Us</h1>
-			<form
+			<StyledHeader>Contact Us</StyledHeader>
+			<StyledForm
 				autoComplete='off'
-				onSubmit={handleSubmit(data => onSubmit(data, setSuccessForm))}
+				onSubmit={handleSubmit(data => onSubmit(data, setSuccessForm, reset))}
 				action=''
 			>
-				<div>
-					<span>First Name *</span>
-					<input
-						{...register('firstName', { required: 'This field is required' })}
-						type='text'
-						placeholder='first name'
-						className={errors.firstName ? 'input-error' : ''}
-					/>
-					<p>{errors.firstName?.message}</p>
-					<span>Last Name *</span>
-					<input
-						{...register('lastName', { required: 'This field is required' })}
-						type='text'
-						placeholder='last name'
-						className={errors.lastName ? 'input-error' : ''}
-					/>
-					<p>{errors.lastName?.message}</p>
-				</div>
-				<span>Email Address *</span>
-				<input
+				<StyledNameandSurname>
+					<StyledEachInputContainer>
+						<StyledLabel>First Name *</StyledLabel>
+						<StyledInput
+							{...register('firstName', { required: 'This field is required' })}
+							type='text'
+							className={errors.firstName ? 'input-error' : ''}
+						/>
+						<p>{errors.firstName?.message}</p>
+					</StyledEachInputContainer>
+					<StyledEachInputContainer>
+						<StyledLabel>Last Name *</StyledLabel>
+						<StyledInput
+							{...register('lastName', { required: 'This field is required' })}
+							type='text'
+							className={errors.lastName ? 'input-error' : ''}
+						/>
+						<p>{errors.lastName?.message}</p>
+					</StyledEachInputContainer>
+				</StyledNameandSurname>
+				<StyledLabel>Email Address *</StyledLabel>
+				<StyledInput
 					{...register('email', {
 						required: 'Please enter a valid email address'
 					})}
-					type='mail'
-					placeholder='email'
+					type='email'
 					className={errors.email ? 'input-error' : ''}
 				/>
 				<p>{errors.email?.message}</p>
-				<div>
-					<span>Query type *</span>
-					<div>
-						<input
-							type='radio'
-							{...register('query', { required: true })}
-							id='general'
-							value={'general'}
-						/>
-						<span className={selectedRadio === 'general' ? 'selected' : ''}>
-							General Enquiry
-						</span>
-
-						<input
-							type='radio'
-							{...register('query', { required: 'Please select a query type' })}
-							id='support'
-							value={'support'}
-						/>
-						<span className={selectedRadio === 'support' ? 'selected' : ''}>
-							Support Request
-						</span>
-						<p>{errors.query?.message}</p>
-					</div>
-				</div>
-				<div>
-					<span>Message</span>
-					<textarea
+				<StyledEachInputContainer>
+					<StyledLabel>Query type *</StyledLabel>
+					<StyledQueryContainer>
+						<StyledEachQuery
+							className={selectedRadio === 'general' ? 'selected' : ''}
+						>
+							<input
+								type='radio'
+								{...register('query', { required: true })}
+								id='general'
+								value={'general'}
+							/>
+							<span>General Enquiry</span>
+						</StyledEachQuery>
+						<StyledEachQuery
+							className={selectedRadio === 'support' ? 'selected' : ''}
+						>
+							<input
+								type='radio'
+								{...register('query', {
+									required: 'Please select a query type'
+								})}
+								id='support'
+								value={'support'}
+							/>
+							<span>Support Request</span>
+							<p>{errors.query?.message}</p>
+						</StyledEachQuery>
+					</StyledQueryContainer>
+				</StyledEachInputContainer>
+				<StyledTextcontainer>
+					<StyledLabel>Message</StyledLabel>
+					<StyledTextArea
 						{...register('text', { required: 'This field is required' })}
 						id=''
 						className={errors.text ? 'input-error' : ''}
-					></textarea>
+					></StyledTextArea>
 					<p>{errors.text?.message}</p>
-				</div>
-				<div>
+				</StyledTextcontainer>
+				<StyledConsentBox>
 					<input
 						type='checkbox'
 						{...register('consent', {
@@ -99,15 +121,16 @@ const Form = () => {
 					/>
 					<span>I consent to being contacted by the team *</span>
 					<p>{errors.consent?.message}</p>
-				</div>
-				<button type='submit'>submit</button>
-			</form>
-		</div>
+				</StyledConsentBox>
+				<StyledSubmitButton type='submit'>submit</StyledSubmitButton>
+			</StyledForm>
+		</StyledFormContainer>
 	);
 };
 
-const onSubmit = (data, setSuccessForm) => {
+const onSubmit = (data, setSuccessForm, reset) => {
 	console.log(data);
 	setSuccessForm(true);
+	reset();
 };
 export default Form;
