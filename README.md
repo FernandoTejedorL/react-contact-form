@@ -27,10 +27,10 @@ FERNANDO TEJEDOR
 
 <ul>
     <li>
-        <a href="fernandotejedorlopez@gmail.com" target="_blank" rel="noopener noreferrer">fernandotejedorlopez@gmail.com</a>
+        <a href="fernandotejedorlopez@gmail.com" >fernandotejedorlopez@gmail.com</a>
     </li>
     <li>
-        <a href="https://www.linkedin.com/in/fernando-tejedor-65483b6b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/fernando-tejedor-65483b6b" >LinkedIn</a>
     </li>
 </ul>
 
