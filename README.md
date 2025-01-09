@@ -1,7 +1,7 @@
 # Título del proyecto
 
 <p>
-    <img src="" alt="Imagen del proyecto">
+    <img src="https://raw.githubusercontent.com/FernandoTejedorL/react-contact-form/refs/heads/main/design/update.png" alt="Imagen del proyecto">
 </p>
 
 ## Vista en vivo
