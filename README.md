@@ -27,18 +27,12 @@ FERNANDO TEJEDOR
 
 <ul>
     <li>
-        <a href="fernandotejedorlopez@gmail.com">fernandotejedorlopez@gmail.com</a>
+        <a href="fernandotejedorlopez@gmail.com" target="_blank" rel="noopener noreferrer">fernandotejedorlopez@gmail.com</a>
     </li>
     <li>
-        <a href="https://www.linkedin.com/in/fernando-tejedor-65483b6b">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/fernando-tejedor-65483b6b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </li>
 </ul>
 
+This project is built using Vite.
 
-## Instalación
-
-Este proyecto está construido con Vite.
-
-- Para editarlo ejecuta el comando <b>npm run dev</b>
-- Para construir la versión de producción ejecuta el comando <b>npm run build</b>
-- Para previsualizar la versión final ejecuta el comando <b>npm run preview</b>
