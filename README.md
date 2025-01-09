@@ -21,10 +21,7 @@ The use of react hook form to easily make form validations
     </a>
 </p>
 
-## Capturas del proyecto
-
-
-## Autor ✒️
+## Author ✒️
 
 FERNANDO TEJEDOR
 
@@ -33,7 +30,7 @@ FERNANDO TEJEDOR
         <a href="fernandotejedorlopez@gmail.com">fernandotejedorlopez@gmail.com</a>
     </li>
     <li>
-        <a href="[https://www.linkedin.com/in/tu-url-de-linkedin/](https://www.linkedin.com/in/fernando-tejedor-65483b6b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/fernando-tejedor-65483b6b">LinkedIn</a>
     </li>
 </ul>
 
