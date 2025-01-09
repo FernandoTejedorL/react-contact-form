@@ -139,6 +139,62 @@ const StyledSubmitButton = styled.button`
 	}
 `;
 
+const StyledErrorText = styled.span`
+	color: ${COLORS.red};
+	margin-top: 0.5rem;
+`;
+
+const StyledMessageSent = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	position: absolute;
+	top: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	color: ${COLORS.white};
+	background-color: ${COLORS.green600};
+	width: 20.4375rem;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+
+	@media screen and (width>=768px) {
+		top: 2rem;
+		width: 28.125rem;
+	}
+`;
+
+const StyledCheckbox = styled.input`
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.125rem;
+	height: 1.125rem;
+	accent-color: ${COLORS.green600};
+	border: 0.0625rem solid ${COLORS.green600};
+
+	&:checked {
+		background-color: ${COLORS.green600};
+	}
+`;
+
+const StyledRadio = styled.input`
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.125rem;
+	height: 1.125rem;
+	accent-color: ${COLORS.green600};
+	border: 0.0625rem solid ${COLORS.green600};
+	border-radius: 50%;
+
+	&:checked {
+		background-color: ${COLORS.green600};
+	}
+`;
+
 export {
 	StyledFormContainer,
 	StyledHeader,
@@ -152,5 +208,9 @@ export {
 	StyledTextcontainer,
 	StyledTextArea,
 	StyledConsentBox,
-	StyledSubmitButton
+	StyledSubmitButton,
+	StyledErrorText,
+	StyledMessageSent,
+	StyledCheckbox,
+	StyledRadio
 };

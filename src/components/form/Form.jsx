@@ -1,16 +1,20 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import {
+	StyledCheckbox,
 	StyledConsentBox,
 	StyledEachInputContainer,
 	StyledEachQuery,
+	StyledErrorText,
 	StyledForm,
 	StyledFormContainer,
 	StyledHeader,
 	StyledInput,
 	StyledLabel,
+	StyledMessageSent,
 	StyledNameandSurname,
 	StyledQueryContainer,
+	StyledRadio,
 	StyledSubmitButton,
 	StyledTextArea,
 	StyledTextcontainer
@@ -24,17 +28,16 @@ const Form = () => {
 		reset,
 		formState: { errors }
 	} = useForm();
-	console.log(errors); // comprobar que está vacío
 	const selectedRadio = watch('query');
 	const [successForm, setSuccessForm] = useState(false);
 
 	return (
 		<StyledFormContainer>
 			{successForm && (
-				<div>
+				<StyledMessageSent>
 					<h2>Message Sent!</h2>
 					<p>Thanks for completing the form. We’ll be in touch soon!</p>
-				</div>
+				</StyledMessageSent>
 			)}
 			<StyledHeader>Contact Us</StyledHeader>
 			<StyledForm
@@ -50,7 +53,7 @@ const Form = () => {
 							type='text'
 							className={errors.firstName ? 'input-error' : ''}
 						/>
-						<p>{errors.firstName?.message}</p>
+						<StyledErrorText>{errors.firstName?.message}</StyledErrorText>
 					</StyledEachInputContainer>
 					<StyledEachInputContainer>
 						<StyledLabel>Last Name *</StyledLabel>
@@ -59,7 +62,7 @@ const Form = () => {
 							type='text'
 							className={errors.lastName ? 'input-error' : ''}
 						/>
-						<p>{errors.lastName?.message}</p>
+						<StyledErrorText>{errors.lastName?.message}</StyledErrorText>
 					</StyledEachInputContainer>
 				</StyledNameandSurname>
 				<StyledLabel>Email Address *</StyledLabel>
@@ -70,14 +73,14 @@ const Form = () => {
 					type='email'
 					className={errors.email ? 'input-error' : ''}
 				/>
-				<p>{errors.email?.message}</p>
+				<StyledErrorText>{errors.email?.message}</StyledErrorText>
 				<StyledEachInputContainer>
 					<StyledLabel>Query type *</StyledLabel>
 					<StyledQueryContainer>
 						<StyledEachQuery
 							className={selectedRadio === 'general' ? 'selected' : ''}
 						>
-							<input
+							<StyledRadio
 								type='radio'
 								{...register('query', { required: true })}
 								id='general'
@@ -88,7 +91,7 @@ const Form = () => {
 						<StyledEachQuery
 							className={selectedRadio === 'support' ? 'selected' : ''}
 						>
-							<input
+							<StyledRadio
 								type='radio'
 								{...register('query', {
 									required: 'Please select a query type'
@@ -97,9 +100,9 @@ const Form = () => {
 								value={'support'}
 							/>
 							<span>Support Request</span>
-							<p>{errors.query?.message}</p>
 						</StyledEachQuery>
 					</StyledQueryContainer>
+					<StyledErrorText>{errors.query?.message}</StyledErrorText>
 				</StyledEachInputContainer>
 				<StyledTextcontainer>
 					<StyledLabel>Message</StyledLabel>
@@ -108,10 +111,10 @@ const Form = () => {
 						id=''
 						className={errors.text ? 'input-error' : ''}
 					></StyledTextArea>
-					<p>{errors.text?.message}</p>
+					<StyledErrorText>{errors.text?.message}</StyledErrorText>
 				</StyledTextcontainer>
 				<StyledConsentBox>
-					<input
+					<StyledCheckbox
 						type='checkbox'
 						{...register('consent', {
 							required: 'To submit this form, please consent to being contacted'
@@ -120,8 +123,8 @@ const Form = () => {
 						className={errors.consent ? 'input-error' : ''}
 					/>
 					<span>I consent to being contacted by the team *</span>
-					<p>{errors.consent?.message}</p>
 				</StyledConsentBox>
+				<StyledErrorText>{errors.consent?.message}</StyledErrorText>
 				<StyledSubmitButton type='submit'>submit</StyledSubmitButton>
 			</StyledForm>
 		</StyledFormContainer>
