@@ -110,6 +110,7 @@ const StyledTextArea = styled.textarea`
 	min-height: 15rem;
 	border-radius: 0.5rem;
 	border: 0.0625rem solid ${COLORS.green600};
+	padding: 0.5rem;
 
 	@media screen and (width>=768px) {
 		min-height: 8.25rem;
