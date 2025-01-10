@@ -37,8 +37,4 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
 
-    .selected{
-        background-color: ${COLORS.green200};
-    }
-
 `;

@@ -95,10 +95,30 @@ const StyledEachQuery = styled.div`
 	padding: 0.8125rem 1.5rem;
 	border-radius: 0.5rem;
 	border: 0.0625rem solid ${COLORS.grey500};
+
+	background-color: ${({ $selectedRadio, $isSelected }) =>
+		$selectedRadio === $isSelected ? `${COLORS.green200}` : `${COLORS.white}`};
+
 	@media (hover: hover) {
 		&:hover {
 			border: 0.0625rem solid ${COLORS.green600};
 		}
+	}
+`;
+
+const StyledRadio = styled.input`
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.125rem;
+	height: 1.125rem;
+	accent-color: ${COLORS.green600};
+	border: 0.0625rem solid ${COLORS.green600};
+	border-radius: 50%;
+
+	&.checked {
+		background-color: ${COLORS.green600};
 	}
 `;
 
@@ -179,22 +199,6 @@ const StyledCheckbox = styled.input`
 	height: 1.125rem;
 	accent-color: ${COLORS.green600};
 	border: 0.0625rem solid ${COLORS.green600};
-
-	&:checked {
-		background-color: ${COLORS.green600};
-	}
-`;
-
-const StyledRadio = styled.input`
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 1.125rem;
-	height: 1.125rem;
-	accent-color: ${COLORS.green600};
-	border: 0.0625rem solid ${COLORS.green600};
-	border-radius: 50%;
 
 	&:checked {
 		background-color: ${COLORS.green600};

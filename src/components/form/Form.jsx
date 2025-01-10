@@ -30,7 +30,6 @@ const Form = () => {
 	} = useForm();
 	const selectedRadio = watch('query');
 	const [successForm, setSuccessForm] = useState(false);
-
 	return (
 		<StyledFormContainer>
 			{successForm && (
@@ -78,8 +77,8 @@ const Form = () => {
 					<StyledLabel>Query type *</StyledLabel>
 					<StyledQueryContainer>
 						<StyledEachQuery
-							className={selectedRadio === 'general' ? 'selected' : ''}
-							$selected={selectedRadio}
+							$selectedRadio={selectedRadio}
+							$isSelected={'general'}
 						>
 							<StyledRadio
 								type='radio'
@@ -90,7 +89,8 @@ const Form = () => {
 							<span>General Enquiry</span>
 						</StyledEachQuery>
 						<StyledEachQuery
-							className={selectedRadio === 'support' ? 'selected' : ''}
+							$selectedRadio={selectedRadio}
+							$isSelected={'support'}
 						>
 							<StyledRadio
 								type='radio'
