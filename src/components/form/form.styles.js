@@ -60,7 +60,10 @@ const StyledInput = styled.input`
 	height: 3.1875rem;
 	padding: 0.75rem 1.5rem;
 	border-radius: 0.5rem;
-	border: 0.0625rem solid ${COLORS.grey500};
+	border: ${({ $isError }) =>
+		$isError
+			? `0.0625rem solid ${COLORS.red}`
+			: `0.0625rem solid ${COLORS.grey500}`};
 	font-size: ${FONT_SIZE.bodyM};
 
 	@media (hover: hover) {
@@ -92,7 +95,6 @@ const StyledEachQuery = styled.div`
 	padding: 0.8125rem 1.5rem;
 	border-radius: 0.5rem;
 	border: 0.0625rem solid ${COLORS.grey500};
-
 	@media (hover: hover) {
 		&:hover {
 			border: 0.0625rem solid ${COLORS.green600};
@@ -109,7 +111,10 @@ const StyledTextcontainer = styled.div`
 const StyledTextArea = styled.textarea`
 	min-height: 15rem;
 	border-radius: 0.5rem;
-	border: 0.0625rem solid ${COLORS.green600};
+	border: ${({ $isError }) =>
+		$isError
+			? `0.0625rem solid ${COLORS.red}`
+			: `0.0625rem solid ${COLORS.grey500}`};
 	padding: 0.5rem;
 
 	@media screen and (width>=768px) {

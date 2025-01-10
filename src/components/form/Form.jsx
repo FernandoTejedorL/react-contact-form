@@ -51,7 +51,7 @@ const Form = () => {
 						<StyledInput
 							{...register('firstName', { required: 'This field is required' })}
 							type='text'
-							className={errors.firstName ? 'input-error' : ''}
+							$isError={errors.firstName}
 						/>
 						<StyledErrorText>{errors.firstName?.message}</StyledErrorText>
 					</StyledEachInputContainer>
@@ -60,7 +60,7 @@ const Form = () => {
 						<StyledInput
 							{...register('lastName', { required: 'This field is required' })}
 							type='text'
-							className={errors.lastName ? 'input-error' : ''}
+							$isError={errors.lastName}
 						/>
 						<StyledErrorText>{errors.lastName?.message}</StyledErrorText>
 					</StyledEachInputContainer>
@@ -71,7 +71,7 @@ const Form = () => {
 						required: 'Please enter a valid email address'
 					})}
 					type='email'
-					className={errors.email ? 'input-error' : ''}
+					$isError={errors.email}
 				/>
 				<StyledErrorText>{errors.email?.message}</StyledErrorText>
 				<StyledEachInputContainer>
@@ -79,6 +79,7 @@ const Form = () => {
 					<StyledQueryContainer>
 						<StyledEachQuery
 							className={selectedRadio === 'general' ? 'selected' : ''}
+							$selected={selectedRadio}
 						>
 							<StyledRadio
 								type='radio'
@@ -109,7 +110,7 @@ const Form = () => {
 					<StyledTextArea
 						{...register('text', { required: 'This field is required' })}
 						id=''
-						className={errors.text ? 'input-error' : ''}
+						$isError={errors.text}
 					></StyledTextArea>
 					<StyledErrorText>{errors.text?.message}</StyledErrorText>
 				</StyledTextcontainer>
@@ -120,7 +121,6 @@ const Form = () => {
 							required: 'To submit this form, please consent to being contacted'
 						})}
 						id='consent'
-						className={errors.consent ? 'input-error' : ''}
 					/>
 					<span>I consent to being contacted by the team *</span>
 				</StyledConsentBox>

@@ -41,8 +41,4 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${COLORS.green200};
     }
 
-    .input-error{
-        border: 0.0625rem solid ${COLORS.red};
-    }
-
 `;
