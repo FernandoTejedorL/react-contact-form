@@ -6,3 +6,4 @@ export const COLORS = {
 	red: '#D73C3C',
 	white: '#FFF'
 };
+
